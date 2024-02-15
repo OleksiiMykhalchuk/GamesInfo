@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881450C32B7E751700E4DB1C /* SecretConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 881450C22B7E751700E4DB1C /* SecretConfig.plist */; };
 		88A04CF12B7DFF62007ACC23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04CF02B7DFF62007ACC23 /* AppDelegate.swift */; };
 		88A04CF32B7DFF62007ACC23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04CF22B7DFF62007ACC23 /* SceneDelegate.swift */; };
 		88A04CF52B7DFF62007ACC23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04CF42B7DFF62007ACC23 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		88A04D602B7E475B007ACC23 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D5F2B7E475B007ACC23 /* Colors.swift */; };
 		88A04D622B7E495D007ACC23 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D612B7E495D007ACC23 /* HomeCoordinator.swift */; };
 		88A04D642B7E496C007ACC23 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D632B7E496C007ACC23 /* SettingsCoordinator.swift */; };
+		88A04D682B7E6741007ACC23 /* SecretConfig-example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88A04D672B7E6741007ACC23 /* SecretConfig-example.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		881450C22B7E751700E4DB1C /* SecretConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SecretConfig.plist; sourceTree = "<group>"; };
 		88A04CED2B7DFF62007ACC23 /* GamesInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamesInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A04CF02B7DFF62007ACC23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88A04CF22B7DFF62007ACC23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		88A04D5F2B7E475B007ACC23 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		88A04D612B7E495D007ACC23 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		88A04D632B7E496C007ACC23 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		88A04D672B7E6741007ACC23 /* SecretConfig-example.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SecretConfig-example.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +278,8 @@
 				88A04D502B7E1AE7007ACC23 /* PROD.xcconfig */,
 				88A04D512B7E1F2C007ACC23 /* Debug.xcconfig */,
 				88A04D522B7E1F3A007ACC23 /* Release.xcconfig */,
+				88A04D672B7E6741007ACC23 /* SecretConfig-example.plist */,
+				881450C22B7E751700E4DB1C /* SecretConfig.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -391,7 +397,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881450C32B7E751700E4DB1C /* SecretConfig.plist in Resources */,
 				88A04D002B7DFF63007ACC23 /* LaunchScreen.storyboard in Resources */,
+				88A04D682B7E6741007ACC23 /* SecretConfig-example.plist in Resources */,
 				88A04CFD2B7DFF63007ACC23 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
