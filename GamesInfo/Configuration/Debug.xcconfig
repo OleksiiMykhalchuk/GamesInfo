@@ -1,0 +1,11 @@
+//
+//  Debug.xcconfig
+//  GamesInfo
+//
+//  Created by Oleksii Mykhalchuk on 2/15/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+CONFIGURATION = "Debug"
