@@ -1,0 +1,249 @@
+##################
+# SwiftLint config
+#
+# Resources:
+# - "SwiftLint": https://github.com/realm/SwiftLint
+# - "SwiftLint Rules": https://realm.github.io/SwiftLint/rule-directory.html
+# - run this command to see an easy to read dump of all rules, default values, category, etc: "mobile-ios/Linting/swiftlint rules"
+##################
+
+##################
+# These are all of the rules that are ENABLED by default
+#
+# - note: any commented out rules here will still be ENABLED
+##################
+disabled_rules:
+  - block_based_kvo
+  - class_delegate_protocol
+  - closing_brace # prefer SwiftFormat `spaceInsideParens`
+#  - closure_parameter_position
+#  - colon
+#  - comma
+#  - comma_inheritance
+  - comment_spacing # prefer SwiftFormat `spaceInsideComments`
+#  - compiler_protocol_init
+#  - computed_accessors_order
+  - control_statement # prefer SwiftFormat `redundantParens`
+  - custom_rules
+  - cyclomatic_complexity # this requires heavy refactoring
+#  - deployment_target
+#  - discouraged_direct_init
+#  - duplicate_enum_cases
+  - duplicate_imports # prefer SwiftFormat `duplicateImports`
+#  - duplicated_key_in_dictionary_literal
+#  - dynamic_inline
+#  - empty_enum_arguments
+#  - empty_parameters
+  - empty_parentheses_with_trailing_closure # prefer SwiftFormat `redundantParens`
+  - file_length
+#  - for_where
+#  - force_cast
+#  - force_try
+  - function_body_length
+  - function_parameter_count
+  - generic_type_name
+  - identifier_name
+  - implicit_getter # prefer SwiftFormat `redundantGet`
+  - inclusive_language # this suggests using alternatives to whitelist/blacklist/etc.. revisit
+#  - inert_defer
+#  - is_disjoint
+  - large_tuple
+#  - leading_whitespace
+#  - legacy_cggeometry_functions
+#  - legacy_constant
+#  - legacy_constructor
+#  - legacy_hashing
+#  - legacy_nsgeometry_functions
+#  - legacy_random
+  - line_length
+  - mark # prefer SwiftFormat `todos`
+#  - multiple_closures_with_trailing_closure
+  - nesting
+#  - no_fallthrough_only
+  - no_space_in_method_call # prefer SwiftFormat `spaceAroundParens`
+  - notification_center_detachment
+#  - nsobject_prefer_isequal
+  - opening_brace # prefer SwiftFormat `braces`
+  - operator_whitespace # prefer SwiftFormat `spaceAroundOperators`
+#  - orphaned_doc_comment
+  - private_over_fileprivate # prefer SwiftFormat `redundantFileprivate`
+#  - private_unit_test
+#  - protocol_property_accessors_order
+#  - reduce_boolean
+  - redundant_discardable_let # prefer SwiftFormat `redundantLet`
+  - redundant_objc_attribute # prefer SwiftFormat `redundantObjc`
+  - redundant_optional_initialization # prefer SwiftFormat `redundantNilInit`
+#  - redundant_set_access_control
+  - redundant_string_enum_value # prefer SwiftFormat `redundantRawValues`
+  - redundant_void_return # prefer SwiftFormat `redundantVoidReturnType`
+#  - return_arrow_whitespace
+#  - self_in_property_initialization #important rule!! causes hard to diagnose bugs
+#  - shorthand_operator
+  - statement_position # prefer SwiftFormat `elseOnSameLine`
+#  - superfluous_disable_command
+  - switch_case_alignment
+  - syntactic_sugar # prefer SwiftFormat `typeSugar`
+#  - todo
+  - trailing_comma # prefer SwiftFormat `trailingCommas`
+  - trailing_newline # prefer SwiftFormat `linebreakAtEndOfFile`
+  - trailing_semicolon # prefer SwiftFormat `semicolons`
+  - trailing_whitespace # prefer SwiftFormat `trailingSpace`
+  - type_body_length
+  - type_name
+#  - unavailable_condition
+  - unneeded_break_in_switch # prefer SwiftFormat `redundantBreak`
+#  - unused_capture_list
+  - unused_closure_parameter # prefer SwiftFormat `unusedArguments`
+#  - unused_control_flow_label
+  - unused_enumerated # prefer SwiftFormat `redundantPattern`
+#  - unused_optional_binding
+#  - unused_setter_value
+#  - valid_ibinspectable
+  - vertical_parameter_alignment
+  - vertical_whitespace # prefer SwiftFormat `consecutiveBlankLines`
+  - void_return # prefer SwiftFormat `void`
+#  - xctfail_message
+
+##################
+# These are all of the rules that are DISABLED by default
+#
+# - note: any commented out rules here will still be DISABLED
+##################
+opt_in_rules:
+#  - accessibility_label_for_image # revisit for accessibility
+#  - anonymous_argument_in_multiline_closure
+#  - anyobject_protocol # prefer SwiftFormat `anyObjectProtocol`
+  - array_init
+#  - attributes # prefer SwiftFormat `wrapAttributes`
+#  - balanced_xctest_lifecycle
+#  - capture_variable # bruh what... i can't even comprehend the rule description, it's a tongue twister... revisit this
+#  - closure_body_length
+  - closure_end_indentation
+#  - closure_spacing # prefer SwiftFormat `spaceAroundBraces`
+  - collection_alignment
+#  - conditional_returns_on_newline # prefer SwiftFormat `wrapConditionalBodies`
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_first_not_nil
+  - contains_over_range_nil_comparison
+#  - convenience_type # prefer SwiftFormat `enumNamespaces`
+#  - discarded_notification_center_observer # revisit - not sure about this
+#  - discouraged_assert # prefer SwiftFormat `assertionFailures`
+  - discouraged_none_name
+  - discouraged_object_literal
+#  - discouraged_optional_boolean # revisit - probs a good thing to enforce
+#  - discouraged_optional_collection
+#  - empty_collection_literal # this rule is problematic, since objc types don't have an `isEmpty` method
+#  - empty_count # prefer SwiftFormat `isEmpty`
+#  - empty_string # this rule is problematic, since objc types don't have an `isEmpty` method
+  - empty_xctest_method
+#  - enum_case_associated_values_count
+#  - expiring_todo
+#  - explicit_acl
+#  - explicit_enum_raw_value
+#  - explicit_init # prefer SwiftFormat `redundantInit`
+#  - explicit_self # prefer SwiftFormat `redundantSelf`
+#  - explicit_top_level_acl # prefer using implicit `internal` top level declarations
+#  - explicit_type_interface
+#  - extension_access_modifier # prefer SwiftFormat `extensionAccessControl`
+#  - fallthrough
+  - fatal_error_message
+#  - file_header # prefer SwiftFormat `fileHeader`
+#  - file_name
+  - file_name_no_space
+#  - file_types_order
+  - first_where
+  - flatmap_over_map_reduce
+  - force_unwrapping
+#  - function_default_parameter_at_end
+  - ibinspectable_in_extension
+  - identical_operands
+#  - implicit_return # prefer SwiftFormat `redundantReturn`
+  - implicitly_unwrapped_optional
+#  - indentation_width # prefer SwiftFormat `indent`
+  - joined_default_parameter
+  - last_where
+  - legacy_multiple
+#  - legacy_objc_type # revisit
+#  - let_var_whitespace
+  - literal_expression_end_indentation
+  - lower_acl_than_parent
+#  - missing_docs
+#  - modifier_order # prefer SwiftFormat `modifierOrder`
+  - multiline_arguments
+#  - multiline_arguments_brackets # revisit - this goes well with `multiline_arguments`
+#  - multiline_function_chains
+#  - multiline_literal_brackets
+#  - multiline_parameters
+#  - multiline_parameters_brackets
+  - nimble_operator
+#  - no_extension_access_modifier
+#  - no_grouping_extension
+  - nslocalizedstring_key # yup!!!
+#  - nslocalizedstring_require_bundle
+#  - number_separator # ewww
+#  - object_literal
+#  - operator_usage_whitespace # prefer SwiftFormat `spaceAroundOperators`
+#  - optional_enum_case_matching
+#  - overridden_super_call
+  - override_in_extension
+#  - pattern_matching_keywords # prefer SwiftFormat `hoistPatternLet`
+#  - prefer_nimble
+  - prefer_self_in_static_references
+  - prefer_self_type_over_type_of_self
+  - prefer_zero_over_explicit_init
+#  - prefixed_toplevel_constant
+  - private_action
+  - private_outlet
+  - private_subject
+#  - prohibited_interface_builder # revisit - is this something to enforce?
+#  - prohibited_super_call
+#  - quick_discouraged_call # revisit - is quick needed?
+#  - quick_discouraged_focused_test # revisit - is quick needed?
+#  - quick_discouraged_pending_test # revisit - is quick needed?
+#  - raw_value_for_camel_cased_codable_enum
+#  - reduce_into # revisit - not sure i follow this one
+  - redundant_nil_coalescing
+#  - redundant_type_annotation # prefer SwiftFormat `redundantType`
+#  - required_deinit
+#  - required_enum_case
+#  - return_value_from_void_function # returning void methods is actually preferred and looks cleaner imo, especially in guards
+#  - single_test_class
+  - sorted_first_last
+#  - sorted_imports # prefer SwiftFormat `sortedImports`
+#  - static_operator # revisit?
+#  - strict_fileprivate
+#  - strong_iboutlet # prefer SwiftFormat `strongOutlets`
+  - switch_case_on_newline
+#  - test_case_accessibility # revisit?
+  - toggle_bool
+#  - trailing_closure
+#  - type_contents_order
+#  - typesafe_array_init
+  - unavailable_function
+#  - unneeded_parentheses_in_closure_argument # prefer SwiftFormat `redundantParens`
+  - unowned_variable_capture # this is safe!
+  - untyped_error_in_catch
+#  - unused_declaration
+#  - unused_import # revisit - nice to have
+#  - vertical_parameter_alignment_on_call
+#  - vertical_whitespace_between_cases
+#  - vertical_whitespace_closing_braces
+#  - vertical_whitespace_opening_braces
+#  - weak_delegate # unreliable rule - sometimes problematic
+  - xct_specific_matcher
+#  - yoda_condition # prefer SwiftFormat `yodaConditions`
+
+##################
+# Excluded files / directories
+##################
+excluded:
+  - ${SRCROOT}/Pods
+  - ${SRCROOT}/Scripts
+  - ${SRCROOT}/fastlane
+  - ${SRCROOT}/ShoprollTests/Mocks
+
+##################
+# Console output setting
+##################
+reporter: "xcode"
