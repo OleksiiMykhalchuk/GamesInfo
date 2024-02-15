@@ -17,6 +17,13 @@
 		88A04D0B2B7DFF63007ACC23 /* GamesInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D0A2B7DFF63007ACC23 /* GamesInfoTests.swift */; };
 		88A04D152B7DFF63007ACC23 /* GamesInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D142B7DFF63007ACC23 /* GamesInfoUITests.swift */; };
 		88A04D172B7DFF63007ACC23 /* GamesInfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D162B7DFF63007ACC23 /* GamesInfoUITestsLaunchTests.swift */; };
+		88A04D2C2B7E0A8B007ACC23 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D2B2B7E0A8B007ACC23 /* NetworkProtocol.swift */; };
+		88A04D2E2B7E0AB0007ACC23 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D2D2B7E0AB0007ACC23 /* Coordinator.swift */; };
+		88A04D302B7E0AE3007ACC23 /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D2F2B7E0AE3007ACC23 /* AppLogger.swift */; };
+		88A04D332B7E0B55007ACC23 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D322B7E0B55007ACC23 /* OnboardingCoordinator.swift */; };
+		88A04D352B7E0B79007ACC23 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D342B7E0B79007ACC23 /* MainCoordinator.swift */; };
+		88A04D382B7E0BBA007ACC23 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D372B7E0BBA007ACC23 /* BaseViewController.swift */; };
+		88A04D3C2B7E0C0D007ACC23 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D3B2B7E0C0D007ACC23 /* ViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		88A04D102B7DFF63007ACC23 /* GamesInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GamesInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A04D142B7DFF63007ACC23 /* GamesInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesInfoUITests.swift; sourceTree = "<group>"; };
 		88A04D162B7DFF63007ACC23 /* GamesInfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesInfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		88A04D2B2B7E0A8B007ACC23 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		88A04D2D2B7E0AB0007ACC23 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		88A04D2F2B7E0AE3007ACC23 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
+		88A04D322B7E0B55007ACC23 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		88A04D342B7E0B79007ACC23 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		88A04D372B7E0BBA007ACC23 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		88A04D3B2B7E0C0D007ACC23 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,13 @@
 		88A04CEF2B7DFF62007ACC23 /* GamesInfo */ = {
 			isa = PBXGroup;
 			children = (
+				88A04D3D2B7E0CA0007ACC23 /* Persistance */,
+				88A04D312B7E0B1F007ACC23 /* Analytics */,
+				88A04D2A2B7E0A6E007ACC23 /* Network */,
+				88A04D272B7E0A3E007ACC23 /* Utils */,
+				88A04D262B7E0A30007ACC23 /* Coordinator */,
+				88A04D252B7E0A24007ACC23 /* View */,
+				88A04D242B7E0A1D007ACC23 /* Model */,
 				88A04CF02B7DFF62007ACC23 /* AppDelegate.swift */,
 				88A04CF22B7DFF62007ACC23 /* SceneDelegate.swift */,
 				88A04CF42B7DFF62007ACC23 /* ViewController.swift */,
@@ -128,6 +149,86 @@
 				88A04D162B7DFF63007ACC23 /* GamesInfoUITestsLaunchTests.swift */,
 			);
 			path = GamesInfoUITests;
+			sourceTree = "<group>";
+		};
+		88A04D242B7E0A1D007ACC23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88A04D252B7E0A24007ACC23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88A04D362B7E0BA4007ACC23 /* Shared */,
+				88A04D292B7E0A61007ACC23 /* Main */,
+				88A04D282B7E0A58007ACC23 /* Onboarding */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88A04D262B7E0A30007ACC23 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				88A04D2D2B7E0AB0007ACC23 /* Coordinator.swift */,
+				88A04D322B7E0B55007ACC23 /* OnboardingCoordinator.swift */,
+				88A04D342B7E0B79007ACC23 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		88A04D272B7E0A3E007ACC23 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				88A04D2F2B7E0AE3007ACC23 /* AppLogger.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		88A04D282B7E0A58007ACC23 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		88A04D292B7E0A61007ACC23 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		88A04D2A2B7E0A6E007ACC23 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				88A04D2B2B7E0A8B007ACC23 /* NetworkProtocol.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		88A04D312B7E0B1F007ACC23 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		88A04D362B7E0BA4007ACC23 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				88A04D372B7E0BBA007ACC23 /* BaseViewController.swift */,
+				88A04D3B2B7E0C0D007ACC23 /* ViewModelProtocol.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		88A04D3D2B7E0CA0007ACC23 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +387,14 @@
 			files = (
 				88A04CF52B7DFF62007ACC23 /* ViewController.swift in Sources */,
 				88A04CF12B7DFF62007ACC23 /* AppDelegate.swift in Sources */,
+				88A04D2E2B7E0AB0007ACC23 /* Coordinator.swift in Sources */,
+				88A04D2C2B7E0A8B007ACC23 /* NetworkProtocol.swift in Sources */,
 				88A04CF32B7DFF62007ACC23 /* SceneDelegate.swift in Sources */,
+				88A04D382B7E0BBA007ACC23 /* BaseViewController.swift in Sources */,
+				88A04D332B7E0B55007ACC23 /* OnboardingCoordinator.swift in Sources */,
+				88A04D3C2B7E0C0D007ACC23 /* ViewModelProtocol.swift in Sources */,
+				88A04D302B7E0AE3007ACC23 /* AppLogger.swift in Sources */,
+				88A04D352B7E0B79007ACC23 /* MainCoordinator.swift in Sources */,
 				88A04CFB2B7DFF62007ACC23 /* GamesInfo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
