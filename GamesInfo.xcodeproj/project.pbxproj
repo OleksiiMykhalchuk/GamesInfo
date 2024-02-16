@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881450C32B7E751700E4DB1C /* SecretConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 881450C22B7E751700E4DB1C /* SecretConfig.plist */; };
+		881450C52B7E75C800E4DB1C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881450C42B7E75C800E4DB1C /* NetworkService.swift */; };
 		88A04CF12B7DFF62007ACC23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04CF02B7DFF62007ACC23 /* AppDelegate.swift */; };
 		88A04CF32B7DFF62007ACC23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04CF22B7DFF62007ACC23 /* SceneDelegate.swift */; };
 		88A04CF52B7DFF62007ACC23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04CF42B7DFF62007ACC23 /* ViewController.swift */; };
@@ -31,6 +33,9 @@
 		88A04D602B7E475B007ACC23 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D5F2B7E475B007ACC23 /* Colors.swift */; };
 		88A04D622B7E495D007ACC23 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D612B7E495D007ACC23 /* HomeCoordinator.swift */; };
 		88A04D642B7E496C007ACC23 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A04D632B7E496C007ACC23 /* SettingsCoordinator.swift */; };
+		88A04D682B7E6741007ACC23 /* SecretConfig-example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88A04D672B7E6741007ACC23 /* SecretConfig-example.plist */; };
+		88FE6E382B7F6B6600252BA3 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE6E372B7F6B6600252BA3 /* EndPoint.swift */; };
+		88FE6E3A2B7F6C9900252BA3 /* SecretConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE6E392B7F6C9900252BA3 /* SecretConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		881450C22B7E751700E4DB1C /* SecretConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SecretConfig.plist; sourceTree = "<group>"; };
+		881450C42B7E75C800E4DB1C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		88A04CED2B7DFF62007ACC23 /* GamesInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamesInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A04CF02B7DFF62007ACC23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88A04CF22B7DFF62007ACC23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +91,9 @@
 		88A04D5F2B7E475B007ACC23 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		88A04D612B7E495D007ACC23 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		88A04D632B7E496C007ACC23 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		88A04D672B7E6741007ACC23 /* SecretConfig-example.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SecretConfig-example.plist"; sourceTree = "<group>"; };
+		88FE6E372B7F6B6600252BA3 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		88FE6E392B7F6C9900252BA3 /* SecretConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +184,7 @@
 		88A04D242B7E0A1D007ACC23 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				88FE6E392B7F6C9900252BA3 /* SecretConfig.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				88A04D2B2B7E0A8B007ACC23 /* NetworkProtocol.swift */,
+				881450C42B7E75C800E4DB1C /* NetworkService.swift */,
+				88FE6E372B7F6B6600252BA3 /* EndPoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -274,6 +287,8 @@
 				88A04D502B7E1AE7007ACC23 /* PROD.xcconfig */,
 				88A04D512B7E1F2C007ACC23 /* Debug.xcconfig */,
 				88A04D522B7E1F3A007ACC23 /* Release.xcconfig */,
+				88A04D672B7E6741007ACC23 /* SecretConfig-example.plist */,
+				881450C22B7E751700E4DB1C /* SecretConfig.plist */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -391,7 +406,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881450C32B7E751700E4DB1C /* SecretConfig.plist in Resources */,
 				88A04D002B7DFF63007ACC23 /* LaunchScreen.storyboard in Resources */,
+				88A04D682B7E6741007ACC23 /* SecretConfig-example.plist in Resources */,
 				88A04CFD2B7DFF63007ACC23 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,10 +463,13 @@
 				88A04D402B7E1731007ACC23 /* Environment.swift in Sources */,
 				88A04D642B7E496C007ACC23 /* SettingsCoordinator.swift in Sources */,
 				88A04CF12B7DFF62007ACC23 /* AppDelegate.swift in Sources */,
+				88FE6E3A2B7F6C9900252BA3 /* SecretConfig.swift in Sources */,
 				88A04D2E2B7E0AB0007ACC23 /* Coordinator.swift in Sources */,
 				88A04D2C2B7E0A8B007ACC23 /* NetworkProtocol.swift in Sources */,
 				88A04D5C2B7E271C007ACC23 /* SettingsViewController.swift in Sources */,
+				881450C52B7E75C800E4DB1C /* NetworkService.swift in Sources */,
 				88A04CF32B7DFF62007ACC23 /* SceneDelegate.swift in Sources */,
+				88FE6E382B7F6B6600252BA3 /* EndPoint.swift in Sources */,
 				88A04D562B7E259C007ACC23 /* MainViewController.swift in Sources */,
 				88A04D382B7E0BBA007ACC23 /* BaseViewController.swift in Sources */,
 				88A04D332B7E0B55007ACC23 /* OnboardingCoordinator.swift in Sources */,
@@ -672,7 +692,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.GamesInfo.reelase;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.GamesInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -798,10 +818,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = DEV;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -814,7 +831,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = DEV;
@@ -828,6 +845,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 48ZGK5S53A;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = DEV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GamesInfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -841,6 +859,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.GamesInfo.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -927,10 +946,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = STAGE;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -943,7 +959,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGE;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = STAGE;
@@ -957,6 +973,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 48ZGK5S53A;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = STAGE;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GamesInfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -970,6 +987,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.GamesInfo.stage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGE;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1056,10 +1074,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = PROD;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1072,7 +1087,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = PROD;
@@ -1086,6 +1101,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 48ZGK5S53A;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = PROD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GamesInfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1097,8 +1113,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.GamesInfo.prod;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.oleksi.GamesInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
