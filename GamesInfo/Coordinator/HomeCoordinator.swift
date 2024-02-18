@@ -18,6 +18,9 @@ final class HomeCoordinator: Coordinator {
     
     func start() {
         let mainController = MainViewController()
+        let viewModel = MainViewModel()
+        viewModel.start()
+        mainController.viewModel = viewModel
         mainController.tabBarItem.image = UIImage(systemName: "house")
         mainController.tabBarItem.title = NSLocalizedString("Home", comment: "Tabbar title")
         mainController.title = NSLocalizedString("Home", comment: "Home View Title")

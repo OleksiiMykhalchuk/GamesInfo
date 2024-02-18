@@ -9,6 +9,8 @@ import UIKit
 
 final class MainViewController: BaseViewController {
 
+    var viewModel: MainViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

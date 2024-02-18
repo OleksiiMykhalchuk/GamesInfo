@@ -149,6 +149,7 @@ final class OnboardingViewController: BaseViewController {
     private func buttonDidPressed() {
 
         if currentPage >= Constants.pagesCount - 1 {
+            viewModel?.saveSelectedGenres()
             viewModel?.navigateToMain()
         } else {
             currentPage += 1
