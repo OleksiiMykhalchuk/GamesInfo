@@ -35,6 +35,6 @@ final class MainCoordinator: Coordinator {
 
         tabBar.viewControllers = [homeCoordinator.navigationController, settingsCoordintor.navigationController]
 
-        navigationController.setViewControllers([tabBar], animated: false)
+        navigationController.setViewControllers([tabBar], animated: true)
     }
 }

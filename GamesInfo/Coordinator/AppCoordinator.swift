@@ -17,8 +17,8 @@ final class AppCoordinator: Coordinator {
     }
     
     func start() {
-//        showOnboarding()
-        showMain()
+        showOnboarding()
+//        showMain()
     }
 
     private func showMain() {

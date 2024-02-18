@@ -9,4 +9,6 @@ import UIKit
 
 enum Colors {
     static let backgroundColor = UIColor(named: "backgroundColor")
+    static let primaryColorWhite = UIColor(named: "primaryColorWhite")
+    static let primaryColorBlack = UIColor(named: "primaryColorBlack")
 }

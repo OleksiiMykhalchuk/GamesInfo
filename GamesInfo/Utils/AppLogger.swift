@@ -44,12 +44,8 @@ final class AppLogger: Loggable {
 
     private let logger: Logger
 
-    init?(_ category: Category = .default) {
-        guard let bundle = Bundle.main.bundleIdentifier else {
-            Logger().fault("\(Self.self) Failed to initialize")
-            return nil
-        }
-        logger = Logger(subsystem: bundle, category: category.rawValue)
+    init(_ category: Category = .default) {
+        logger = Logger(subsystem: "\(Bundle.main.bundleIdentifier ?? "UNKNOWN")", category: category.rawValue)
     }
 
     func debug(_ message: String, file: String = #file, function: String = #function, line: Int = #line) {
