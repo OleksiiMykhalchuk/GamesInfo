@@ -1,0 +1,39 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Choose 3 or more genres" : {
+      "comment" : "Genre Message label"
+    },
+    "Congratulations" : {
+      "comment" : "Congratulations Title"
+    },
+    "Error" : {
+      "comment" : "Alert Title"
+    },
+    "Finish" : {
+      "comment" : "Finish Title"
+    },
+    "Genre" : {
+      "comment" : "Genre Title"
+    },
+    "Hello!\nPress Next to choose genre." : {
+      "comment" : "Welcome Message Label"
+    },
+    "Home" : {
+      "comment" : "Home View Title\n   Tabbar title"
+    },
+    "Next" : {
+      "comment" : "Next Title"
+    },
+    "Settings" : {
+      "comment" : "Settings View Title\n   Tabbar title"
+    },
+    "Thank you!\nPress Finish to continue" : {
+      "comment" : "Finish Message Label"
+    },
+    "Welcome" : {
+      "comment" : "Welcome Title"
+    }
+  },
+  "version" : "1.0"
+}
