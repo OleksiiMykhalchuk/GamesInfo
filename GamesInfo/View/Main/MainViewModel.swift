@@ -31,6 +31,17 @@ final class MainViewModel: ViewModelProtocol {
     }
 
     func start() {
+        fetchGames()
+    }
+
+    func viewWillAppear() {
+        if storage.isContextChanged {
+            fetchGames()
+            storage.saveContext()
+        }
+    }
+
+    private func fetchGames() {
         do {
             if let genres = try storage.fetchGenres() {
                 self.genres = genres.map { $0.genre.lowercased() }.joined(separator: ",")
@@ -39,11 +50,6 @@ final class MainViewModel: ViewModelProtocol {
         } catch {
             logger.fault("\(error)")
         }
-
-        fetchGames()
-    }
-
-    private func fetchGames() {
         currentPage = 1
         try? network
             .getData(from: .games([
@@ -102,7 +108,8 @@ final class MainViewModel: ViewModelProtocol {
                         self?.storeError.send(error)
                     }
                 } receiveValue: { [weak self] model in
-                    self?.model?.results?.append(contentsOf: model.results!)
+                    guard let results = model.results else { return }
+                    self?.model?.results?.append(contentsOf: results)
                     self?.model?.next = model.next
                     self?.nextPagePublisher.send(true)
                 }.store(in: &subscriptions)

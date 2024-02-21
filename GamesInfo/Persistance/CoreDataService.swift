@@ -16,6 +16,10 @@ final class CoreDataService: LocalPersistable {
 
     private let logger: AppLogger = .init()
 
+    var isContextChanged: Bool {
+        persistentContainer.viewContext.hasChanges
+    }
+
     private init() {}
 
     private lazy var persistentContainer: NSPersistentContainer = {
@@ -33,6 +37,13 @@ final class CoreDataService: LocalPersistable {
             let model = GenreEntity(context: persistentContainer.viewContext)
             model.id = UUID()
             model.genre = $0
+        }
+    }
+
+    func removeGenres(_ genres: [GenreEntity]) {
+        let context = persistentContainer.viewContext
+        genres.forEach {
+            context.delete($0)
         }
     }
 

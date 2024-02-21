@@ -37,7 +37,12 @@ final class GenresViewController: BaseViewController {
             }).store(in: &subscriptions)
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .done, primaryAction: UIAction { [weak self] _ in
-            self?.navigationController?.popViewController(animated: true)
+            if self?.viewModel?.storedGenresCount ?? 0 < 1 {
+                self?.alert("Selected Genres should be at least one!")
+            } else {
+                self?.navigationController?.popViewController(animated: true)
+                self?.viewModel?.saveChanges()
+            }
         })
     }
 
@@ -70,4 +75,14 @@ extension GenresViewController: UICollectionViewDataSource {
 
 extension GenresViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? GenreCollectionViewCell {
+            cell.selection.toggle()
+            if cell.selection == true {
+                viewModel?.addGenre(cell.getGenre())
+            } else {
+                viewModel?.removeGenre(cell.getGenre())
+            }
+        }
+    }
 }

@@ -56,6 +56,11 @@ final class MainViewController: BaseViewController {
         navigationItem.searchController = searchBar
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel?.viewWillAppear()
+    }
+
     private func bind() {
         viewModel?
             .bind()
