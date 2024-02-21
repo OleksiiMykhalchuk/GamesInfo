@@ -19,6 +19,7 @@ final class HomeCoordinator: Coordinator {
     func start() {
         let mainController = MainViewController()
         let viewModel = MainViewModel()
+        viewModel.coordinator = self
         viewModel.start()
         mainController.viewModel = viewModel
         mainController.tabBarItem.image = UIImage(systemName: "house")
@@ -28,5 +29,11 @@ final class HomeCoordinator: Coordinator {
         navigationController.setViewControllers([mainController], animated: false)
     }
     
-    
+    func navigateToGameInfo(model: GamesResult) {
+        let controller = GameInfoViewController()
+        let viewModel = GameInfoViewModel(model: model)
+        viewModel.start()
+        controller.viewModel = viewModel
+        navigationController.pushViewController(controller, animated: true)
+    }
 }

@@ -151,6 +151,7 @@ final class OnboardingViewController: BaseViewController {
         if currentPage >= Constants.pagesCount - 1 {
             viewModel?.saveSelectedGenres()
             viewModel?.navigateToMain()
+            viewModel?.setOnborded()
         } else {
             currentPage += 1
             collectionView.scrollToItem(at: IndexPath(item: currentPage, section: 0), at: .centeredHorizontally, animated: true)

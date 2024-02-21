@@ -9,12 +9,13 @@ import Foundation
 
 struct GamesModel: Codable {
     let count: Int
-    let next: String?
+    var next: String?
     let previous: String?
-    let results: [GamesResult]
+    var results: [GamesResult]?
 }
 
-struct GamesResult: Codable {
+struct GamesResult: Codable, Hashable {
+    let uuid = UUID()
     let id: Int
     let name: String
     let backgroundImage: String
@@ -25,6 +26,14 @@ struct GamesResult: Codable {
         case name
         case backgroundImage = "background_image"
         case genres
+    }
+
+    static func == (lhs: GamesResult, rhs: GamesResult) -> Bool {
+        lhs.uuid == rhs.uuid
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(uuid)
     }
 }
 

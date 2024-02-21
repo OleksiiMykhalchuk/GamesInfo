@@ -55,7 +55,7 @@ final class OnboardingViewModel: ViewModelProtocol {
     }
 
     func genresName() -> [String] {
-        genres?.results.map { $0.name } ?? []
+        genres?.results.map { $0.slug } ?? []
     }
 
     func addGenre(_ value: String) -> Int {
@@ -78,5 +78,9 @@ final class OnboardingViewModel: ViewModelProtocol {
 
     func saveSelectedGenres() {
         storage.addGenres(selectedGenres)
+    }
+
+    func setOnborded() {
+        UserDefaultsService.shared.setOnboarded()
     }
 }
