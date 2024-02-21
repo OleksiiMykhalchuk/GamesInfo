@@ -90,3 +90,6 @@ fastlane/test_output
 iOSInjectionProject/
 
 GamesInfo/Configuration/SecretConfig.plist
+
+GoogleService-Info.plist
+GamesInfo.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
