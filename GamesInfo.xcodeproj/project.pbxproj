@@ -51,6 +51,8 @@
 		88C104BE2B851BC300FE0234 /* GameInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C104BD2B851BC300FE0234 /* GameInfoViewModel.swift */; };
 		88C104C02B8527F000FE0234 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C104BF2B8527F000FE0234 /* SettingsViewModel.swift */; };
 		88C104C22B852BB500FE0234 /* GenresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C104C12B852BB500FE0234 /* GenresViewController.swift */; };
+		88E21D8D2B861A9400D8BD84 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E21D8C2B861A9400D8BD84 /* MockURLProtocol.swift */; };
+		88E21D8F2B861D2D00D8BD84 /* NetowrkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E21D8E2B861D2D00D8BD84 /* NetowrkTests.swift */; };
 		88FE6E382B7F6B6600252BA3 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE6E372B7F6B6600252BA3 /* EndPoint.swift */; };
 		88FE6E3A2B7F6C9900252BA3 /* SecretConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE6E392B7F6C9900252BA3 /* SecretConfig.swift */; };
 		88FE6E3D2B7F906900252BA3 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE6E3C2B7F906900252BA3 /* OnboardingCollectionViewCell.swift */; };
@@ -132,6 +134,8 @@
 		88C104BD2B851BC300FE0234 /* GameInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoViewModel.swift; sourceTree = "<group>"; };
 		88C104BF2B8527F000FE0234 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		88C104C12B852BB500FE0234 /* GenresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresViewController.swift; sourceTree = "<group>"; };
+		88E21D8C2B861A9400D8BD84 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		88E21D8E2B861D2D00D8BD84 /* NetowrkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetowrkTests.swift; sourceTree = "<group>"; };
 		88FE6E372B7F6B6600252BA3 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		88FE6E392B7F6C9900252BA3 /* SecretConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretConfig.swift; sourceTree = "<group>"; };
 		88FE6E3C2B7F906900252BA3 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				88A04D0A2B7DFF63007ACC23 /* GamesInfoTests.swift */,
+				88E21D8A2B861A6C00D8BD84 /* NetworkTests */,
 			);
 			path = GamesInfoTests;
 			sourceTree = "<group>";
@@ -406,6 +411,23 @@
 				88C104B92B8514CF00FE0234 /* GameCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		88E21D8A2B861A6C00D8BD84 /* NetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				88E21D8B2B861A7F00D8BD84 /* Utils */,
+				88E21D8E2B861D2D00D8BD84 /* NetowrkTests.swift */,
+			);
+			path = NetworkTests;
+			sourceTree = "<group>";
+		};
+		88E21D8B2B861A7F00D8BD84 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				88E21D8C2B861A9400D8BD84 /* MockURLProtocol.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		88FE6E3B2B7F904C00252BA3 /* Cells */ = {
@@ -634,6 +656,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A04D0B2B7DFF63007ACC23 /* GamesInfoTests.swift in Sources */,
+				88E21D8F2B861D2D00D8BD84 /* NetowrkTests.swift in Sources */,
+				88E21D8D2B861A9400D8BD84 /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
