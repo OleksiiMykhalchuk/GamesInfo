@@ -127,7 +127,7 @@ final class MainViewController: BaseViewController {
         let cellRegister = makeCellRegistration()
         let footerCell = makeFooterRegistration()
 
-        var dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in
+        let dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, itemIdentifier in
             collectionView.dequeueConfiguredReusableCell(using: cellRegister, for: indexPath, item: itemIdentifier)
         }
 
@@ -163,8 +163,6 @@ final class MainViewController: BaseViewController {
         dataSource.apply(snapshot)
     }
 }
-
-
 
 extension MainViewController: UISearchBarDelegate {
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
