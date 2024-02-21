@@ -9,6 +9,8 @@ import Foundation
 
 enum EndPoint {
     case genres([URLQueryItem])
+    case games([URLQueryItem])
+    case image(url: String)
 
     func makeURL() throws -> URL? {
         let environment = Environment.identify()
@@ -20,6 +22,12 @@ enum EndPoint {
             baseURL?.append(path: "genres")
             baseURL?.append(queryItems: queryItems)
             return baseURL
+        case .games(let queryItems):
+            baseURL?.append(path: "games")
+            baseURL?.append(queryItems: queryItems)
+            return baseURL
+        case .image(let url):
+            return URL(string: url)
         }
     }
 }

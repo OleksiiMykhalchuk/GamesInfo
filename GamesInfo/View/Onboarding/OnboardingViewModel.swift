@@ -16,6 +16,7 @@ final class OnboardingViewModel: ViewModelProtocol {
     private var genres: GenresModel?
     private let loadingPublisher = PassthroughSubject<Bool, Error>()
     private var coordinator: OnboardingCoordinator?
+    private let storage = CoreDataService.shared
 
     let logger: AppLogger
 
@@ -54,7 +55,7 @@ final class OnboardingViewModel: ViewModelProtocol {
     }
 
     func genresName() -> [String] {
-        genres?.results.map { $0.name } ?? []
+        genres?.results.map { $0.slug } ?? []
     }
 
     func addGenre(_ value: String) -> Int {
@@ -73,5 +74,13 @@ final class OnboardingViewModel: ViewModelProtocol {
 
     func navigateToMain() {
         coordinator?.showMain()
+    }
+
+    func saveSelectedGenres() {
+        storage.addGenres(selectedGenres)
+    }
+
+    func setOnborded() {
+        UserDefaultsService.shared.setOnboarded()
     }
 }

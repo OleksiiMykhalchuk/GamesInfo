@@ -17,8 +17,7 @@ final class AppCoordinator: Coordinator {
     }
     
     func start() {
-        showOnboarding()
-//        showMain()
+        UserDefaultsService.shared.isOnboarded() ? showMain() : showOnboarding()
     }
 
     private func showMain() {

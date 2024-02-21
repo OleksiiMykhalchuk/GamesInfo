@@ -32,13 +32,23 @@ final class NetworkService: NetworkProtocol {
             .dataTaskPublisher(for: url)
             .tryMap { [weak self] element -> Data in
                 self?.logger?.debug("\(element.response)")
-                self?.logger?.debug("\(try JSONSerialization.jsonObject(with: element.data))")
+//                self?.logger?.debug("\(try JSONSerialization.jsonObject(with: element.data))")
                 guard let response = element.response as? HTTPURLResponse,
                       (200...299).contains(response.statusCode) else {
                     throw NetworkServiceError.badServerResponse
                 }
                 return element.data
             }
+            .eraseToAnyPublisher()
+    }
+
+    func getData(url: String) throws -> AnyPublisher<Data, URLError> {
+        guard let url = URL(string: url) else {
+            throw NetworkServiceError.badURL
+        }
+        return session
+            .dataTaskPublisher(for: url)
+            .map(\.data)
             .eraseToAnyPublisher()
     }
 }
