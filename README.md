@@ -1,4 +1,4 @@
-# GamesInfo
+# GamesInfo iOS
 
 ## Description
 
