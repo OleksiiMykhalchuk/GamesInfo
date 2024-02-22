@@ -4,6 +4,8 @@
 
 GamesInfo is a Swift-based iOS application built using UIKit that fetches data from the RAWG database, providing users with information about various games. The architecture follows MVVM+C pattern for better separation of concerns and maintainability. 
 
+During development [Trello Board](https://trello.com/b/br1grPrr/ios-game-info-app) was used.
+
 ### Key Features:
 - **Programming Language:** Swift
 - **UI Framework:** UIKit
@@ -21,11 +23,11 @@ GamesInfo is a Swift-based iOS application built using UIKit that fetches data f
 - **Code Quality:** Linter is used to maintain code quality and adherence to coding standards.
 - **Git Flow Strategy:** Git flow strategy is followed to maintain a clean and organized codebase with proper version control.
 
-## Usage
+## Setup
 
 To use the app, follow these steps:
 
-1. Generate an API Key: Obtain an API Key from the RAWG website and add it to the project's configuration as described in the Usage section of this README.
+1. Generate an API Key: Obtain an API Key from the RAWG website and add it to the project's configuration file `SecretConfig.plist` as an example file `SecretConfig-example.plist`.
 
 2. Firebase Configuration: If Firebase features are enabled, generate the `GoogleService-Info.plist` file from the Firebase console and add it to the project folder.
 
